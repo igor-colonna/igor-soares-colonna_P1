@@ -13,3 +13,8 @@ def nob(num_a,num_b):
     else:
         print("Valor Inválido")
     return resposta
+
+def main():
+    print(nob(21,36))
+
+main()
