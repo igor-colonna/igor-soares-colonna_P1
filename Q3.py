@@ -1,8 +1,13 @@
 def calcpi():
-    result = 0
-    n = 1
-    while (-(1/n+2) + (1/n+4)) >= abs(5*(10**-8)):
-        result += (-(1/n+2) + (1/n+4))
-        n += 5
-    pi = 4 * (1-result)
-    return pi
+    dif = 1
+    pi = 0
+    x = 1
+    y = 1
+    while dif > (5*10**(-8)):
+        piant = pi
+        pi = pi + 4/(x*y)
+        x += 2
+        y *= -1
+        dif = (piant - pi) * y
+    print(pi)
+calcpi()
